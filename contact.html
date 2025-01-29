@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Sky</title>
+    <script src="https://kit.fontawesome.com/81e3541af9.js" crossorigin="anonymous"></script> <!-- is the link to use the LinkedIn icon -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Qwigley&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/cv_style.css">
+</head>
+<body>
+    <nav>
+        <p>Tommy Skylar Hill</p>
+        <a href="index.html"><p>About Sky</p></a>
+    </nav>
+
+    <section>
+        <h1>Contact Sky</h1>
+        <p>Athens, Ga &bull; 706-224-8680 &bull; tommy.hill@uga.edu</p>
+    </section>
+
+    <hr>
+
+    <form action="https://formsubmit.co/335b5ddc73fe60176eddf6f182acce40" method="POST" class="one-col"> <!-- Allows the user to enter information; input is usually sent to a server; the 'action' attribute refers to what happens when form is submitted-->
+        <!-- the method attribute, either post or get, yells what type of information -->
+        <label for="userName">Name: </label><input type="text" name="name" id="userName" placeholder="First & Last Name"><br>
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
+        <label for="userEmail"> Email: </label> <input type="email" name="email" id="userEmail" placeholder="Email Address"><br>
+        <label for="userMessage"></label>Message: <textarea name="message" id="userMessage" placeholder="Insert your message here!"></textarea></label>
+
+        <button type="submit" value="">Send it!</button>
+
+    </form>
+
+    <footer>
+        &copy <a href="index.html">Tommy Skylar Hill</a> &nbsp; &bull; &nbsp; <a href="https://www.linkedin.com/in/tommy-hill-706a40298/ " target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 20px"></i></a>
+    </footer>
+
+</body> <!-- -->
+</html>
+<!-- Needs to have a thanks for your response landing page when hitting the submit button (needs to have the same header and nav bar)-->

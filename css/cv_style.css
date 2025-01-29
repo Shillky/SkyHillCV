@@ -1,0 +1,311 @@
+/* General Styles */
+body {
+    margin: auto;
+    background-color: #2D4356;
+}
+
+/* Nav Styles */
+nav {
+    border-radius: 10px;
+    border: 2px solid #223443;
+    background-color: #435B66;
+    margin: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    position: sticky;
+    top: 4px;
+    z-index: 10;
+    font-size: 1.25em;
+}
+
+nav p, nav a {
+    color: #EAB2A0;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+    text-shadow: 5px 0 5px black;
+}
+
+/* Footer Styles */
+footer {
+    color: #EAB2A0;
+    background: #435B66b5;
+    border-top: #223443b5 1px solid;
+
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    font-family: "Qwigley", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.75em;
+    color: #EAB2A0;
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Splash Section */
+.splash {
+    margin-left: 25px;
+    margin-right: 25px;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.splash h1 {
+    font-family: "Ovo", serif;
+    font-weight: 900;
+    font-size: 2em;
+    color: #EAB2A0;
+    text-shadow: 5px 0 5px black;
+
+    /* flex-basis: 100%; */
+}
+
+.splash img {
+    width: 15%;
+    max-width: 200px;
+    min-width: 200px;
+    mask-image: url('../Images/headshotMask.png');
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    mask-position: center;
+    border-radius: 10px;
+}
+
+.splash p {
+    font-family: "Ovo", serif;
+    color: #EAB2A0;
+    font-size: 1em;
+}
+
+.splash img, .splash h1, .splash .info {
+    grid-column: 1;
+    margin: 0;
+    /* flex: 1; */
+}
+
+.splash .description {
+    grid-column: 2;
+    align-self: start;
+    align-self: center;
+    justify-self: center;
+    text-align: left;
+    margin-right: 20px;
+    font-size: 1.15em;
+}
+
+/* Horizontal Rules */
+hr {
+    background: linear-gradient(to right, #EAB2A0, #5b4a4a, #EAB2A0, #5b4a4a, #EAB2A0);
+    height: 4px;
+    border: 1px dotted #223443;
+}
+
+/* Sections */
+section {
+    margin: 20px;
+    padding: 10px;
+    background-color: #435B66;
+    border-radius: 10px;
+    box-shadow: 2px 0 10px;
+
+    /* display: inline-block; /* Ensures the section scales as a whole */
+    transition: transform 0.3s ease-in-out;
+}
+section:hover{
+    transform: scale(1.02);
+}
+
+section:hover h2{
+    text-decoration: underline wavy;
+}
+
+/* Section Headings */
+section h2 {
+    font-family: "Ovo", serif;
+    font-weight: 900;
+    font-size: 1.75em;
+    color: #EAB2A0;
+    text-shadow: 5px 0 5px black;
+}
+
+/* Paragraph Styles */
+section p {
+    font-family: "Ovo", serif;
+    color: #EAB2A0;
+    font-size: 1.15em;
+    text-shadow: 2px 0 5px black;
+}
+
+/* link styles */
+section a {
+    font-style: italic;
+    color: #EAB2A0;
+    text-decoration: none;
+}
+section a:hover {
+    color: #e6c4b7;
+    text-decoration: underline;
+}
+
+/* List Styles */
+ul {
+    font-family: "Ovo", serif;
+    color: #EAB2A0;
+    font-size: 1.15em;
+    text-shadow: 2px 0 5px black;
+
+    list-style: square inside;
+}
+
+dl {
+    font-family: "Ovo", serif;
+    color: #EAB2A0;
+    font-size: 1.15em;
+    text-shadow: 2px 0 5px black;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 0;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+}
+
+dt:nth-of-type(1) { grid-column: 1; grid-row: 1; }
+dd:nth-of-type(1) { grid-column: 2; grid-row: 1; }
+
+dt:nth-of-type(2) { grid-column: 2; grid-row: 2; }
+dd:nth-of-type(2) { grid-column: 3; grid-row: 2; }
+
+dt:nth-of-type(3) { grid-column: 3; grid-row: 3; }
+dd:nth-of-type(3) { grid-column: 4; grid-row: 3; }
+
+dl dt{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+dl dd{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+dt::after {
+    content: "----";
+    margin-left: 5px;
+}
+
+dd::before {
+    content: "--->";
+    margin-right: 5px;
+}
+
+/* Project Section */
+.three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+}
+
+.card {
+    background: #8e5e5e;
+    border: outset 3px #171717;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 0 7px;
+}
+
+.card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-radius: 25%;
+}
+
+.card h3 {
+    font-family: "Ovo", serif;
+    font-weight: 900;
+    font-size: 1.4em;
+    color: #EAB2A0;
+    text-shadow: 5px 0 4px black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Contact Page Styles */
+.one-col {
+    font-family: "Ovo", serif;
+    color: #EAB2A0;
+    font-size: 1.15em;
+    text-shadow: 2px 0 5px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+
+}
+
+form textarea{
+    border: 2px solid;
+    border-radius: 5px;
+    height: 50px;
+    width: 400px;
+}
+
+form input{
+    border: 2px solid;
+    border-radius: 5px;
+    width: 200px;
+    height: 20px;
+}
+
+form input:focus, form textarea:focus {
+    outline: 2px solid #007BFF;
+}
+
+form button {
+    margin: 10px;
+}
+
+form button:hover {
+    transform: scale(2);
+    font-style: bold;
+    color: white;
+    background-color: #48a248;
+}
